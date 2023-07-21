@@ -54,9 +54,15 @@ Singularity> exit
 exit
 :~$ env | grep DIS
 DISPLAY=:3.0
-:~$ singularity run --env DISPLAY=:3.0 /shared/software/singularity/images/cistem_latest.sif 
+:~$ singularity run --nv --env DISPLAY=:3.0 /shared/software/singularity/images/cistem_latest.sif 
 Singularity> cisTEM
 ```
+** --nv = nvidia
+Show nvidia detail
+```
+nvidia-smi
+```
+
 Pull and run image
 ```
 singularity pull library://library/default/busybox
